@@ -31,7 +31,7 @@ build:
     PUBLIC_URL: https://bigdaddycore.app.bigdaddy-nft.com/bigdaddymintersite/  
   script:
     - npm install      
-    - npm build
+    - npm run build
   artifacts:
     paths:
       - build/ 
