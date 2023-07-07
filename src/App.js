@@ -5,7 +5,7 @@ import BigDaddyMinterComponent from './Components/BigDaddyMinterComponent';
 
 function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <BigDaddyProvider>
         <Routes>
           <Route path="/" element={<BigDaddyMinterComponent />} />
