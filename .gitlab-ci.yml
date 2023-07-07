@@ -32,6 +32,8 @@ build:
   artifacts:
     paths:
       - build/ 
+  tags:
+    - bigdaddy-runner
 
 pages:
   image: alpine:latest
@@ -44,4 +46,6 @@ pages:
   artifacts:
     paths:
       - public
+  tags:
+    - bigdaddy-runner
 
