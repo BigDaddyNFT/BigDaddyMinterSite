@@ -28,7 +28,7 @@ build:
       - node_modules/
   variables: 
     # Replace this with your site URL
-    PUBLIC_URL: https://bigdaddycore.app.bigdaddy-nft.com/bigdaddymintersite/  
+    PUBLIC_URL: http://bigdaddycore.app.bigdaddy-nft.com/bigdaddymintersite/  
   script:
     - npm install      
     - npm run build
