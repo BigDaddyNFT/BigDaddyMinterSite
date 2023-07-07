@@ -21,7 +21,7 @@ stages:
   - deploy
 
 build:
-  image: node:latest    
+  image: node:18-alpine
   stage: build
   variables: 
     # Replace this with your site URL
@@ -36,7 +36,7 @@ build:
     - bigdaddy-runner
 
 pages:
-  image: alpine:latest
+  image: node:18-alpine
   stage: deploy
   variables:
     GIT_STRATEGY: none        # Do not clone git repo
