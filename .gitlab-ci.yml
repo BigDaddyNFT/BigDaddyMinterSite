@@ -23,12 +23,15 @@ stages:
 build:
   image: node:18-alpine
   stage: build
+  cache:
+    paths:
+      - node_modules/
   variables: 
     # Replace this with your site URL
-    PUBLIC_URL: https://bigdaddycore.app.bigdaddy-nft.com/BigDaddyMinterSite/  
+    PUBLIC_URL: https://bigdaddycore.app.bigdaddy-nft.com/bigdaddymintersite/  
   script:
-    - yarn install      
-    - yarn build
+    - npm install      
+    - npm build
   artifacts:
     paths:
       - build/ 
@@ -38,11 +41,12 @@ build:
 pages:
   image: node:18-alpine
   stage: deploy
-  variables:
-    GIT_STRATEGY: none        # Do not clone git repo
+  dependencies: 
+    - build
   script:
-    # Rename the CRA `build` folder to `public`
-    - mv build public         
+    - rm -rf public
+    - cp build/index.html build/404.html
+    - mv build public
   artifacts:
     paths:
       - public
