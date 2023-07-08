@@ -28,7 +28,7 @@ function BigDaddyMinterPage({handleMintNewBigDaddyNFT,nftTemplate, handleLogOut 
   return (
     <div className="bigDaddyContainer">
     <button onClick={handleLogOut} class="glow-on-hover logout">Log Out</button>
-    <img src={"/bigdaddy-logo-quart.png"} width={"300px"} height={"150px"}/>
+    <img src={"/bigdaddy-logo-quart.png"} width={"300px"} height={"150px"} alt="no image"/>
       <h1>Your Private NFT Collection</h1>
       <div className="contentContainer">
         <div className="helpCard">
