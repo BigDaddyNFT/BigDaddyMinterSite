@@ -44,7 +44,11 @@ pages:
   dependencies: 
     - build
   script:
-    - cp build/index.html public/index.html
+    - cp public/bigdaddy-logo-mini.png build/bigdaddy-logo-mini.png
+    - cp public/bigdaddy-logo-quart.png build/bigdaddy-logo-quart.png
+    - rm -rf public
+    - cp build/index.html build/404.html
+    - mv build public
   artifacts:
     paths:
       - public
