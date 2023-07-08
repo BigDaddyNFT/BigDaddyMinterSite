@@ -44,9 +44,7 @@ pages:
   dependencies: 
     - build
   script:
-    - rm -rf public
-    - cp build/index.html build/404.html
-    - mv build public
+    - cp build/index.html public/index.html
   artifacts:
     paths:
       - public
