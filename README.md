@@ -1,4 +1,3 @@
----
 # BigDaddyMinterPage
 
 
@@ -20,19 +19,16 @@ BigDaddy Minter Page is a website allowing users to create a NFT Collection. yDu
 - [BigDaddy Marketplace](https://gitlab.bigdaddy-nft.com/bigdaddycore/bigdaddymarketplace)
   BigDaddy Marketplace is a website allowing users to but a Website Template and to deploy it with a personnal SiteID on the Internet.
 
----
 
 ## Usage
 
 Go to [BigDaddy Minter Page](http://bigdaddycore.app.bigdaddy-nft.com/bigdaddymintersite/)
 
----
 
 ## Contributing
 
 Contributions are what make the open-source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
 
----
 
 ## Contributors
 
@@ -40,10 +36,8 @@ BigMahefa (github profile mahefa621@gmail.com)
 
 BigHarick (github profile harick.one@gmail.com)
 
----
 
 ## Contact
 
 You can contact us at bigdaddy@bigdaddy-nft.com or on our mattermost server https://mattermost.bigdaddy-nft.com/
 
----
