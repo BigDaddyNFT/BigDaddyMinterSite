@@ -1,6 +1,6 @@
 curl -L -o BigDaddyNFT.zip https://github.com/BigDaddyNFT/BigDaddyPlugin/zipball/master/
 unzip BigDaddyNFT.zip -d src
-cd src/BigDaddyNFT-BigDaddyPlugin-6d4bc71
+cd src/BigDaddyNFT-BigDaddyPlugin-2800079
 cp -r BigDaddyNFT ../
 cd ..
 cd ..
