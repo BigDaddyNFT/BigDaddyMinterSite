@@ -44,8 +44,8 @@ pages:
   dependencies: 
     - build
   script:
-    - cp public/bigdaddy-logo-mini.png build/bigdaddy-logo-mini.png
-    - cp public/bigdaddy-logo-quart.png build/bigdaddy-logo-quart.png
+    - cp public/bigdaddylogo-ico-color.png build/bigdaddylogo-ico-color.png
+    - cp public/logo-4.png build/logo-4.png
     - rm -rf public
     - cp build/index.html build/404.html
     - mv build public

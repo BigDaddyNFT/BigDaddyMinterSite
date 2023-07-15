@@ -18,6 +18,7 @@ export function BigDaddyProvider({ children }) {
   const [isBigDaddyLoading, setIsBigDaddyLoading] = useState(false);
   const [isBigDaddyErrorModalOpen, setIsBigDaddyErrorModalOpen] = useState(false);
   const [bigDaddyErrorMessage, setBigDaddyErrorMessage] = useState("");
+  const [fusdBalance, setfusdBalance] = useState(0);
 
   const bigDaddyScripts = new BigDaddyMinterScripts();
   const bigDaddyTransactions = new BigDaddyMinterTransactions();
@@ -26,6 +27,7 @@ export function BigDaddyProvider({ children }) {
     if (user) {
       hasBigDaddyCollection();
       getBigDaddyTemplate();
+      getFUSDBalance();
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [user]);
@@ -42,6 +44,19 @@ export function BigDaddyProvider({ children }) {
     if (user !== null) {
     setUser(null);
     setIsLoggedIn(false);
+    }
+  };
+
+  const getFUSDBalance = async () => {
+    setIsBigDaddyLoading(true);
+    try {
+      const fusdBalance = await bigDaddyScripts.getFUSDBalance(user.addr);
+      setfusdBalance(fusdBalance);
+    } catch (error) {
+      setBigDaddyErrorMessage(error);
+      setIsBigDaddyErrorModalOpen(true);
+    } finally {
+      setIsBigDaddyLoading(false);
     }
   };
 
@@ -109,6 +124,8 @@ export function BigDaddyProvider({ children }) {
                                             isLoggedIn, 
                                             isCollectionEnabled,
                                             nftTemplate, 
+                                            user,
+                                            fusdBalance,
                                             validateLoggedIn, 
                                             disconnect,
                                             handleMintNewBigDaddyNFT, 

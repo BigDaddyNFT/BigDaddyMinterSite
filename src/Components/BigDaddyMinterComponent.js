@@ -35,10 +35,6 @@ const BigDaddyMinterComponent = () => {
 
   }, [validateLoggedIn, disconnect]);
 
-  const handleLogOut = () => {
-    fcl.unauthenticate();
-  };
-
   const bigdaddyhandleLogIn = () => {
     fcl.logIn();
   };
@@ -93,14 +89,12 @@ const BigDaddyMinterComponent = () => {
       <div>
         {isLoggedIn ? (!isCollectionEnabled ? (
           <BigDaddyMinterActivateCollectionPage
-            handleActivateBigDaddyCollection={handleActivateBigDaddyCollection}
-            handleLogOut={handleLogOut} />
+            handleActivateBigDaddyCollection={handleActivateBigDaddyCollection} />
         ) :
           (
             <BigDaddyMinterPage
               handleMintNewBigDaddyNFT={handleMintNewBigDaddyNFT}
-              nftTemplate={nftTemplate}
-              handleLogOut={handleLogOut} />
+              nftTemplate={nftTemplate} />
           )
         ) : (
           <BigDaddyMinterLoginPage
